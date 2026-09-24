@@ -18,11 +18,25 @@ void CreatePyramid(int x){
 
 }
 
+void CreateReversePyramid(int x){
+
+        for(int i = x; i >= 1; i--){
+            for(int j = x; j >= i; j--){
+                printf(" ");
+            }
+            for(int j = 0; j < i+(i-1); j++){
+                printf("*");
+            }
+            printf("\n");
+        }
+}
+
 
 
 
 
 int main(){
 
-    CreatePyramid(6);
+    CreatePyramid(12);
+    CreateReversePyramid(12);
 }
