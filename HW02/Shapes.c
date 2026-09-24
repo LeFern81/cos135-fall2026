@@ -18,7 +18,7 @@ void CreatePyramid(int x){
 
 }
 
-void CreateReversePyramid(int x){
+void CreatePyramidReverse(int x){
 
         for(int i = x; i >= 1; i--){
             for(int j = x; j >= i; j--){
@@ -31,12 +31,33 @@ void CreateReversePyramid(int x){
         }
 }
 
+void gradeHistogram(int arr[], int length){
 
+
+    for(int i = 0; i < length-1; i++){
+
+        int grade = arr[i];
+
+        if (grade < 60){
+            printf("**\n");
+        } else if(grade < 70){
+            printf("****\n");
+        } else if(grade < 80){
+            printf("******\n");
+        } else if(grade < 90){
+            printf("********\n");
+        } else {
+                printf("**********\n");
+        }     
+        }
+}
 
 
 
 int main(){
-
-    CreatePyramid(12);
-    CreateReversePyramid(12);
+    int arr[6] = {90, 64, 50, 72, 85, 95};
+    CreatePyramidReverse(7);
+    CreatePyramid(7);
+    printf("\n");
+    gradeHistogram(arr, 6);
 }
